@@ -1,0 +1,190 @@
+#zimmer {
+    background-color: #f7e0b9;
+    
+    height: 600px;
+    width: 600px;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+#Boxoben{
+
+    width: 600;
+    display:flex;
+    justify-content:space-between;
+    
+}
+
+#Boxunten{
+
+    width: 600;
+    display:flex;
+    justify-content:space-between;
+    flex-direction: row;
+}
+#bett{
+    width: 120px; /* Durchmesser des Kreises */
+    height: 90px; /* Durchmesser des Kreises */
+    background-color: #e9adc9; /* Farbe des Kreises */
+    border-radius: 60%;
+    border: 7px solid #a3613f  ;
+    position: relative;
+    margin-right: 10px;
+    margin-top: 10px;
+    align-content: center;
+
+    
+}
+
+#futter{
+    width: 150px;
+    height: 70px;
+    background-color: #7d7d7d;
+    position: relative;
+    margin-top: 96px;
+    margin-right: 3px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+
+
+
+#napfw{
+    width: 50px;
+    height: 50px;
+    background-color: #729fc9 ;
+    border-radius: 50%;
+    border: 5px solid #000000;
+    align-content: center;
+}
+
+
+
+#napff{
+    width: 50px;
+    height: 50px;
+    background-color: #a3613f ;
+    border-radius: 50%;
+    border: 5px solid #000000;
+    align-content: center;
+
+}
+
+.Katze1 {
+    height: 100px;
+    position: relative;
+    z-index: 100;
+}
+
+#Ankleidezimmer{
+    background-color: #f7e0b9;
+    
+    height: 200px;
+    width: 1000px;
+    display:flex;
+    align-content: space-around;
+}
+
+h1 {
+    color: #bd3a31;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+p {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#umkleide{
+    background-color: #dab370;
+    
+    height: 200px;
+    width: 480px;
+    margin-top:146px ;
+}
+
+.Gott {
+    height: 150px;
+}
+
+.Lilith {
+    height: 150px;
+    
+}
+.PiuPiu {
+    height: 150px;
+}
+
+.Bella {
+    height:150px;
+}
+
+.BerndWalterGudrun {
+    height:150px;
+}
+
+.Carlos{
+    height:150px;
+}
+
+.Edward {
+    height:150px;
+}
+
+.TyffanyJustus {
+    height:150px;
+}
+
+
+
+.Linkschrank {
+    color: hotpink;
+    background-color: #000000;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+   
+    
+}
+
+.Zurück {
+    color: rgb(0, 0, 0);
+    top: -111px;
+    right: -10px;
+}
+
+.dialog {
+    height: 1000px;
+    width: 1000px;
+    display: none;
+    position: absolute;
+    top:0;
+    z-index:101
+    
+}
+
+
+
+.herz-wrapper {
+    position: relative;
+    top: 0;
+    font-size: 20px;
+    
+}
+
+.Herz2 {
+    height: 70px;
+}
+
+.Herzen {
+    
+ position: absolute;
+ top: 13px;
+ left: 80px;
+}
+
+.TOTKatze {
+    width: 1270px;
+}
