@@ -18,7 +18,7 @@ setInterval(() => {
     if (shithappens) {
         return
     }
-    console.log("test",Hunger)
+    //console.log("test",Hunger)
     let initialerHunger = Hunger
     if (Hunger<MaxHunger){
         Hunger++
@@ -106,7 +106,7 @@ setInterval(() => {
     if (shithappens) {
         return
     }
-    console.log("test",Durst)
+    //console.log("test",Durst)
     let initialerDurst = Durst
     if (Durst<MaxDurst){
         Durst++
@@ -147,10 +147,10 @@ function Katzetot(){
 
 
 
-console.log("zahl")
-setInterval(() => {
-    hoppelkatzefranz()
-},6000)
+//console.log("zahl")
+//setInterval(() => {
+ //   hoppelkatzefranz()
+//},6000)
 
 
 function zufaelligeGanzzahl(min, max) {
@@ -218,3 +218,63 @@ console.log(Outfit)
 if (Outfit!==null){
     document.getElementById('KatzeBild').src = Outfit
 }
+
+
+
+
+
+
+document.addEventListener('keydown', function(event) {
+    console.log("test")
+
+    const container = document.getElementById('Zimmer');
+    const katze = document.getElementById('Katze1');
+    const step = 10; // Die Anzahl der Pixel, um die das Div bewegt wird
+    let top = parseInt(window.getComputedStyle(katze).top);
+    let left = parseInt(window.getComputedStyle(katze).left);
+
+    let limits = document.getElementById('zimmer').getBoundingClientRect()
+
+    
+    switch (event.key) {
+        case 'ArrowUp':
+
+            console.log('----')
+            console.log('top katze:', katze.getBoundingClientRect().y)
+            console.log('top feld:', limits.top  + 20)
+            console.log('----')
+
+            if(katze.getBoundingClientRect().y > limits.y + 10 ){
+                top = top - step;
+            }
+            
+            break;
+        case 'ArrowDown':
+            console.log('----')
+            console.log('bottom katze:', katze.getBoundingClientRect().bottom)
+            console.log('bottom feld:', limits.bottom  - 20)
+            console.log('----')
+
+            if(katze.getBoundingClientRect().bottom < limits.bottom - 10 ){
+               top += step;
+            }
+
+            
+            break;
+        case 'ArrowLeft':
+            left -= step;
+            break;
+        case 'ArrowRight':
+            left += step;
+            break;
+    }
+
+    katze.style.top = top + 'px';
+    katze.style.left = left + 'px';
+
+    
+        
+       
+    console.log(document.getElementById('zimmer').getClientRects())
+
+});
