@@ -147,10 +147,10 @@ function Katzetot(){
 
 
 
-//console.log("zahl")
-//setInterval(() => {
- //   hoppelkatzefranz()
-//},6000)
+console.log("zahl")
+setInterval(() => {
+    Pflanze()
+},6000)
 
 
 function zufaelligeGanzzahl(min, max) {
@@ -159,17 +159,17 @@ function zufaelligeGanzzahl(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;  
 }
 
-function hoppelkatzefranz(){
+function Pflanze(){
     // HTML-Element, das bewegt werden soll
-    let Katze1 = document.getElementById('Katze1');
+    let PflanzeBild = document.getElementById('Pflanze');
 
-    let ranTop = zufaelligeGanzzahl(30,300) + 'px'
-    let ranLeft = zufaelligeGanzzahl(30,300) + 'px'
+    let ranTop = zufaelligeGanzzahl(30,250) + 'px'
+    let ranLeft = zufaelligeGanzzahl(30,250) + 'px'
 
-    Katze1.animate(
+    PflanzeBild.animate(
         [
-            {   top: Katze1.style.top ,
-                left:Katze1.style.left
+            {   top: PflanzeBild.style.top ,
+                left:PflanzeBild.style.left
 
             },
             {  
@@ -180,8 +180,8 @@ function hoppelkatzefranz(){
         }
     ) 
 
-    Katze1.style.top = ranTop ,
-    Katze1.style.left = ranLeft
+    PflanzeBild.style.top = ranTop ,
+    PflanzeBild.style.left = ranLeft
 
 }
 
@@ -239,23 +239,14 @@ document.addEventListener('keydown', function(event) {
     switch (event.key) {
         case 'ArrowUp':
 
-            console.log('----')
-            console.log('top katze:', katze.getBoundingClientRect().y)
-            console.log('top feld:', limits.top  + 20)
-            console.log('----')
-
-            if(katze.getBoundingClientRect().y > limits.y + 10 ){
+            if(katze.getBoundingClientRect().y > limits.y + 12 ){
                 top = top - step;
             }
             
             break;
         case 'ArrowDown':
-            console.log('----')
-            console.log('bottom katze:', katze.getBoundingClientRect().bottom)
-            console.log('bottom feld:', limits.bottom  - 20)
-            console.log('----')
-
-            if(katze.getBoundingClientRect().bottom < limits.bottom - 10 ){
+           
+            if(katze.getBoundingClientRect().bottom < limits.bottom - 4 ){
                top += step;
             }
 
@@ -263,9 +254,17 @@ document.addEventListener('keydown', function(event) {
             break;
         case 'ArrowLeft':
             left -= step;
+
+            if(katze.getBoundingClientRect().left < limits.left + 5 ){
+                right += step;
+            }
+
+
             break;
         case 'ArrowRight':
-            left += step;
+            if(katze.getBoundingClientRect().right < limits.right - 10 ){
+                left += step;
+            }
             break;
     }
 

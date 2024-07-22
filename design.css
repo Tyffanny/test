@@ -22,7 +22,7 @@
     justify-content:space-between;
     flex-direction: row;
 }
-#bett{
+/#bett{
     width: 120px; /* Durchmesser des Kreises */
     height: 90px; /* Durchmesser des Kreises */
     background-color: #e9adc9; /* Farbe des Kreises */
@@ -139,8 +139,8 @@ p {
 
 
 .Linkschrank {
-    color: hotpink;
-    background-color: #000000;
+    color: rgb(144, 208, 170);
+    background-color: #314b40;
     padding: 10px 20px;
     text-align: center;
     display: inline-block;
@@ -151,16 +151,17 @@ p {
 
 .Zurück {
     color: rgb(0, 0, 0);
+    
     top: -111px;
-    right: -10px;
+    left: -10px;
 }
 
 .dialog {
     height: 1000px;
-    width: 1000px;
+    width: 100px;
     display: none;
     position: absolute;
-    top:0;
+    top:70px;
     z-index:101
     
 }
@@ -188,3 +189,21 @@ p {
 .TOTKatze {
     width: 1270px;
 }
+
+#neustart{
+  background-color: #62ac89; 
+  padding: 50px 70px;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    left: 600px;
+    top:860px   
+    
+}
+
+.Pflanze{
+    height: 100px;
+    position: relative;
+    z-index: 100;
+}
+
